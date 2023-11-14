@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select</title>
+    <style>
+        img#character-image {
+  background-color: pink;
+}
+    </style>
+</head>
+<body>
+    <img src="" width="520" height=700" id="character-image" alt="character-select-image" />
+<select name="image-choice" id="image-select">
+  <option value="" disabled selected>Select an image</option>
+  <option value="eironn">Eironn</option>
+  <option value="belinda">Belinda</option>
+  <option value="estrilda">Estrilda</option>
+  <option value="brutus">Brutus</option>
+  <option value="kalene">Kelene</option>
+</select>
+    <script>
+        const imageSelect = document.getElementById("image-select");
+const characterImg = document.getElementById("character-image");
+
+const belindaSrc =
+  "https://drive.google.com/uc?export=view&id=1VUs0HCaaJ8TfmqyI01YC7qdMM94lA5yF";
+const estrildaSrc =
+  "https://drive.google.com/uc?export=view&id=1ZZSKtWzPwSxd32M4rmCrTcD6YY4iaGX4";
+const brutusSrc =
+  "https://drive.google.com/uc?export=view&id=1ykirlrhDBi8y3PhfHPcqTehks_FxVAKi";
+const eironnSrc =
+  "https://drive.google.com/uc?export=view&id=135YSALLMk_dGs5HFdjLJNc_Z8X3fHRFG";
+const kaleneSrc =
+  "https://drive.google.com/uc?export=view&id=1bIKf4f3eOYHO3Nu4SE1_V_6rrr1Vms95";
+const characterSrc =
+  "https://drive.google.com/uc?export=view&id=135YSALLMk_dGs5HFdjLJNc_Z8X3fHRFG";
+
+const characterSelectSrc =
+  "https://upload.wikimedia.org/wikipedia/en/b/bd/Daisy_%28Super_Mario_Party%29.png";
+
+characterImg.src = characterSrc;
+
+imageSelect.addEventListener("change", function () {
+  console.log(this.value);
+  let userChoice = this.value;
+  if (userChoice === "eironn") {
+    characterImg.src = eironnSrc;
+  } else if (userChoice === "belinda") {
+    characterImg.src = belindaSrc;
+  } else if (userChoice === "estrilda") {
+    characterImg.src = estrildaSrc;
+  } else if (userChoice === "brutus") {
+    characterImg.src = brutusSrc;
+  } else if (userChoice === "kalene") {
+    characterImg.src = kaleneSrc;
+  }
+});
+
+    </script>
+</body>
+</html>
